@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>fx-improvement@mozillaonline.com</em:id>
+    <em:version>0.2.0</em:version>
+    <em:name>Firefox Improvement</em:name>
+    <em:description>Improve UX in Firefox.</em:description>
+    <em:creator>Mozilla Online</em:creator>
+    <em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+    <em:optionsURL>chrome://cmsafeflag/content/options.xul</em:optionsURL>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>4.0</em:minVersion>
+        <em:maxVersion>22.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:updateURL>https://addons.myfirefox.com.tw/addons/twimprove/update.rdf?version=%ITEM_VERSION%</em:updateURL>
+
+    <em:localized>
+      <Description>
+        <em:locale>zh-CN </em:locale>
+        <em:name>火狐工具集</em:name>
+        <em:description>提升用户体验</em:description>
+        <em:creator>Mozilla Online</em:creator>
+        <em:homepageURL>http://www.firefox.com.cn/</em:homepageURL>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>zh-TW</em:locale>
+        <em:name>火狐工具集</em:name>
+        <em:description>提升使用者體驗</em:description>
+        <em:creator>Mozilla Online</em:creator>
+      </Description>
+    </em:localized>
+  </Description>
+</RDF>

@@ -1,0 +1,12 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+#cpmanagerOptions { min-height: 430px; min-width: 530px; }
+
+#addon { min-height: 270px; min-width: 480px; }
+
+treechildren::-moz-tree-row(selected)            { background-color: #44f; }
+treechildren::-moz-tree-row(odd)                 { background-color: #eee; }
+treechildren::-moz-tree-row(odd, selected)       { background-color: #44f; }
+treechildren::-moz-tree-cell-text(selected)      { color: #fff; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #fff; }

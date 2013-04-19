@@ -1,0 +1,6 @@
+<!ENTITY title "火狐工具集選項">
+
+<!ENTITY safeflagpane.label "安全標識">
+<!ENTITY c-enable.label "啟動安全標識">
+<!ENTITY c-safe.label "偵測為安全網址時，網址欄顯示為綠色背景">
+<!ENTITY c-unsafe.label "偵測到網址有安全疑慮時，網址欄顯示為紅色背景">

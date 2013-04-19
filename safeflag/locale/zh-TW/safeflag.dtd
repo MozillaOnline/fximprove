@@ -1,0 +1,7 @@
+<!ENTITY prefs.options "選項">
+
+<!ENTITY safeflag.keepYourBrowserSafe "Firefox 瀏覽器，時時保護您安全上網！" >
+<!ENTITY safeflag.safeJudgedByGoogle "根據 Google 資訊，網站安全！" >
+<!ENTITY safeflag.safeDescription "經由 Google 提供的網站安全性資料庫數據判定，您目前瀏覽的網站是安全的！" >
+<!ENTITY safeflag.unSafeJudgedByGoogle "偵測到該網站有安全疑慮！" >
+<!ENTITY safeflag.unSafeDescription "經由 Google 提供的網站安全性資料庫數據判定，您目前瀏覽的網站存在安全風險！" >

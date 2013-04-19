@@ -1,0 +1,18 @@
+<!ENTITY title.label "提供意見">
+<!ENTITY compat.title "網站無法正常瀏覽？">
+<!ENTITY compat.label "網址連結：">
+<!ENTITY compat.fillurl "填寫目前網址">
+<!ENTITY suggest.title "意見與建議：">
+<!ENTITY suggest.label "意見內容：">
+<!ENTITY suggest.require "(必填 *)">
+<!ENTITY suggest.box "對Firefox的意見或建議">
+<!ENTITY question.title "使用問題？">
+<!ENTITY question.label "聯絡我們：">
+<!ENTITY question.community "美商謀智Facebook粉絲專頁">
+<!ENTITY question.weibo "美商謀智Google+專頁">
+<!ENTITY submit.button "發送">
+<!ENTITY submit.process "發送中……">
+<!ENTITY submit.fail "發送失败，請檢查是否正常連線">
+<!ENTITY submit.retry "重試">
+<!ENTITY submit.close "關閉">
+<!ENTITY submit.success "意見發送成功！">

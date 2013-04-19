@@ -1,0 +1,13 @@
+<!ENTITY cp.menu.bookmarksShowAll "管理書籤">
+<!ENTITY cp.showAllBookmarks2.label "管理書籤">
+
+<!ENTITY cp.clearRecentHistory.none.label "不自動清除歷史紀錄">
+<!ENTITY cp.clearRecentHistory.7days.label "清除7天前歷史紀錄">
+
+<!ENTITY cp.clearRecentHistory.clearOnClose.label "關閉時清除歷史紀錄">
+
+<!ENTITY cp.privateBrowsingCmd.start.label         "進入隱私瀏覽模式">
+<!ENTITY cp.privateBrowsingCmd.start.accesskey     "P">
+<!ENTITY cp.privateBrowsingCmd.stop.label          "停止隱私瀏覽模式">
+<!ENTITY cp.privateBrowsingCmd.stop.accesskey      "p">
+<!ENTITY cp.privateBrowsingCmd.commandkey          "P">
