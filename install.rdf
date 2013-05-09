@@ -5,7 +5,8 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>fx-improvement@mozillaonline.com</em:id>
-    <em:version>0.2.0</em:version>
+    <em:version>0.2.1</em:version>
+    <em:type>2</em:type>
     <em:name>Firefox Improvement</em:name>
     <em:description>Improve UX in Firefox.</em:description>
     <em:creator>Mozilla Online</em:creator>
@@ -19,8 +20,6 @@
         <em:maxVersion>22.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-
-    <em:updateURL>https://addons.myfirefox.com.tw/addons/twimprove/update.rdf?version=%ITEM_VERSION%</em:updateURL>
 
     <em:localized>
       <Description>

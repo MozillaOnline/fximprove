@@ -20,6 +20,7 @@
           startaccesskey="&cp.privateBrowsingCmd.start.accesskey;"
           stoplabel="&cp.privateBrowsingCmd.stop.label;"
           stopaccesskey="&cp.privateBrowsingCmd.stop.accesskey;"
+          tooltiptext="&cp.privateBrowsingCmd.start.label;"
           key="key_privatebrowsing"
           command="Tools:PrivateBrowsing"/>
   </toolbarpalette>
