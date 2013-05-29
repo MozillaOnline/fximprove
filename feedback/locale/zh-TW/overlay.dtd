@@ -1,13 +1,13 @@
 <!ENTITY title.label "提供意見">
-<!ENTITY compat.title "請將您的意見回饋如下，謝謝！">
-<!ENTITY compat.label "請貼上欲回報的網址：">
+<!ENTITY compat.title "網站無法正常瀏覽？">
+<!ENTITY compat.label "網址連結：">
 <!ENTITY compat.fillurl "填寫目前網址">
 <!ENTITY suggest.title "意見與建議：">
-<!ENTITY suggest.label "留下您的具體建議：">
+<!ENTITY suggest.label "意見內容：">
 <!ENTITY suggest.require "(必填 *)">
-<!ENTITY suggest.box "您的具體建議">
+<!ENTITY suggest.box "對Firefox的意見或建議">
 <!ENTITY email.label "聯絡信箱：">
-<!ENTITY email.box "您的聯絡Email">
+<!ENTITY email.box "您的聯絡 Email">
 <!ENTITY question.title "使用問題？">
 <!ENTITY question.label "聯絡我們：">
 <!ENTITY question.community "美商謀智Facebook粉絲專頁">

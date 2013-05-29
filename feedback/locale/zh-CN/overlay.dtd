@@ -1,5 +1,5 @@
 <!ENTITY title.label "意见反馈">
-<!ENTITY compat.title "请填写您的意见信息，谢谢！">
+<!ENTITY compat.title "网站无法正常访问？">
 <!ENTITY compat.label "报告网址：">
 <!ENTITY compat.fillurl "填入当前网址">
 <!ENTITY suggest.title "有话想对火狐说？">
@@ -7,7 +7,7 @@
 <!ENTITY suggest.require "(必填 *)">
 <!ENTITY suggest.box "对火狐的任何意见、建议">
 <!ENTITY email.label "联系邮箱：">
-<!ENTITY email.box "您的Email">
+<!ENTITY email.box "您的 Email">
 <!ENTITY question.title "使用中遇到问题？">
 <!ENTITY question.label "联系我们：">
 <!ENTITY question.community "美商谋智Facebook主页">

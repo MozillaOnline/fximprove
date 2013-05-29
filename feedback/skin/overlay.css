@@ -26,7 +26,7 @@
 }
 
 #moz-cn-feedback-popup textbox.textarea {
-  text-align:left; font-size:12px; height:75px;
+  text-align:left; height:75px;
 }
 
 #moz-cn-feedback-popup hbox.group, #moz-cn-feedback-popup vbox.group {
@@ -73,7 +73,10 @@
   color:red;
 }
 
-#moz-cn-feedback-title {
-  font-size:16px;
-  font-weight:bold;
+.moz-cn-feedback-label {
+  width: 70px;
+}
+
+#moz-cn-feedback-email *::-moz-placeholder {
+  font-style: normal !important;
 }
