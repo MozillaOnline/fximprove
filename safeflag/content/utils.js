@@ -76,7 +76,7 @@
   };
 
   ns.getTabForWindow = function(win) {
-    aWindow = this.getRootWindow(win);
+    var aWindow = this.getRootWindow(win);
 
     if (!aWindow || !gBrowser.getBrowserIndexForDocument)
       return null;

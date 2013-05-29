@@ -72,3 +72,8 @@
 #moz-cn-feedback-require {
   color:red;
 }
+
+#moz-cn-feedback-title {
+  font-size:16px;
+  font-weight:bold;
+}

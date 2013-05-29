@@ -14,42 +14,31 @@
   </toolbarpalette>
 
   <popupset id="mainPopupSet">
-    <panel id="moz-cn-feedback-popup"  type="arrow" >
+    <panel id="moz-cn-feedback-popup"  type="arrow">
       <vbox id="moz-cn-feedback-popup-main">
         <vbox class="group">
-          <hbox>
             <hbox>
-              <label class="group_title">&compat.title;</label>
+              <label id="moz-cn-feedback-title">&compat.title;</label>
             </hbox>
             <spacer flex="1" />
-            <hbox class="feedback_close" onclick="ceFeedback.close_panel();"></hbox>
-          </hbox>
-          <hbox>
             <hbox>
               <label control="moz-cn-feedback-url">&compat.label;</label>
-            </hbox>
-            <vbox flex="1">
-              <hbox><textbox flex="1" id="moz-cn-feedback-url" class="feedback_url"></textbox></hbox>
               <hbox class="text-link" onclick="ceFeedback.show_url();">&compat.fillurl;</hbox>
-            </vbox>
-          </hbox>
-        </vbox>
-        <vbox class="group">
-          <hbox >
-            <label class="group_title">&suggest.title;</label>
-          </hbox>
-          <hbox>
+            </hbox>
+            <textbox flex="1" id="moz-cn-feedback-url" class="feedback_url"></textbox>
             <vbox>
-              <hbox><label control="moz-cn-feedback-comment">&suggest.label;</label></hbox>
-              <hbox id="moz-cn-feedback-require" class="required" style="display:none;">
-                <label>&suggest.require;</label>
+              <hbox>
+                <label control="moz-cn-feedback-comment">&suggest.label;</label>
+                <hbox id="moz-cn-feedback-require" class="required" style="display:none;">
+                  <label>&suggest.require;</label>
+                </hbox>
               </hbox>
             </vbox>
             <textbox flex="1" id="moz-cn-feedback-comment" class="textarea" rows="3" multiline="true" placeholder="&suggest.box;" ></textbox>
-          </hbox>
-        </vbox>
-
-        <vbox class="group">
+            <hbox>
+              <label control="moz-cn-feedback-email">&email.label;</label>
+            </hbox>
+            <textbox flex="1" id="moz-cn-feedback-email" placeholder="&email.box;" class="feedback_url"></textbox>
           <hbox>
             <label class="group_title">&question.title;</label>
           </hbox>

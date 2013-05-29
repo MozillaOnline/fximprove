@@ -6,6 +6,8 @@
 <!ENTITY suggest.label "Feedback:">
 <!ENTITY suggest.require "(required)">
 <!ENTITY suggest.box "Any questions or suggestions to Firefox.">
+<!ENTITY email.label "Email:">
+<!ENTITY email.box "Your Email">
 <!ENTITY question.title "Questions:">
 <!ENTITY question.label "Contact us:">
 <!ENTITY question.community "Facebook Page">

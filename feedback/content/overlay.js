@@ -42,6 +42,7 @@ var ceFeedback = {
     this.el("moz-cn-feedback-messs").style.display = "block";
     this.el("moz-cn-feedback-url").reset();
     this.el("moz-cn-feedback-comment").reset();
+    this.el("moz-cn-feedback-email").reset();
     window.setTimeout(function() {
       ceFeedback.close_panel();
       ceFeedback.input_recover();
@@ -65,7 +66,9 @@ var ceFeedback = {
   },
 
   send_request: function() {
-    var content = "url=" + this.el("moz-cn-feedback-url").value + "&comment=" + this.el("moz-cn-feedback-comment").value;
+    var content = "url=" + this.el("moz-cn-feedback-url").value
+                + "&comment=" + this.el("moz-cn-feedback-comment").value
+                + "&email=" + this.el("moz-cn-feedback-email").value;
     var url = "http://feedback.myfirefox.com.tw/apply/feed_addon.php";
     var request = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"].createInstance(Components.interfaces.nsIXMLHttpRequest);
     request.onload = function(aEvent) {
@@ -84,15 +87,17 @@ var ceFeedback = {
   input_disable: function() {
     this.el("moz-cn-feedback-comment").disabled = true;
     this.el("moz-cn-feedback-url").disabled = true;
+    this.el("moz-cn-feedback-email").disabled = true;
   },
 
   input_recover: function() {
     this.el("moz-cn-feedback-comment").disabled = false;
     this.el("moz-cn-feedback-url").disabled = false;
+    this.el("moz-cn-feedback-email").disabled = false;
   },
 
   submit: function() {
-    if (this.el("moz-cn-feedback-url").value == "" && this.el("moz-cn-feedback-comment").value == "") {
+    if (this.el("moz-cn-feedback-comment").value == "") {
       this.el("moz-cn-feedback-require").style.display = "block";
     } else {
       this.send_request();
@@ -104,7 +109,7 @@ var ceFeedback = {
   },
 
   resubmit: function() {
-    if (this.el("moz-cn-feedback-url").value == "" && this.el("moz-cn-feedback-comment").value == "") {
+    if (this.el("moz-cn-feedback-comment").value == "") {
       this.el("moz-cn-feedback-require").style.display = "block";
     } else {
       this.input_disable();
