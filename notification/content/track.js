@@ -8,6 +8,9 @@
   var _trackurl = "http://adu.myfirefox.com.tw/addons/notification.gif";
 
   ns.track = function(option) {
+    // getDataChoices
+    if(! Application.prefs.getValue("extensions.tpmanager.tracking.enabled",false))
+      return;
     option = MOA.AN.Lib.extend(option, {
       type: "",
       rid: "",
