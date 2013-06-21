@@ -6,8 +6,5 @@
 
 <!ENTITY cp.clearRecentHistory.clearOnClose.label "關閉時清除歷史紀錄">
 
-<!ENTITY cp.privateBrowsingCmd.start.label         "新增隱私視窗">
-<!ENTITY cp.privateBrowsingCmd.start.accesskey     "P">
-<!ENTITY cp.privateBrowsingCmd.stop.label          "停止隱私瀏覽模式">
-<!ENTITY cp.privateBrowsingCmd.stop.accesskey      "p">
-<!ENTITY cp.privateBrowsingCmd.commandkey          "P">
+<!ENTITY cp.newPrivateWindow.label                 "新增隱私視窗">
+<!ENTITY cp.newPrivateWindow.accesskey             "P">
