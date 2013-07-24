@@ -61,31 +61,62 @@
     },
 
     init: function Improve_BM__init() {
-      PlacesStarButton.onClick = function (aEvent) {
-        var tfID = PlacesUtils.unfiledBookmarksFolderId;
-        var showUI = true;
-        try {
-          tfID = Services.prefs.getIntPref("extensions.cmimprove.bookmarks.parentFolder");
-          if (tfID == -1) {
-            tfID = Services.prefs.getIntPref("extensions.cmimprove.bookmarks.add.defaultFolder");
-          }
-          showUI = (this._itemIds.length > 0) || Application.prefs.getValue("extensions.cmimprove.bookmarks.add.showEditUI", false);
-          if (!showUI)
+      if(window.PlacesStarButton){
+        PlacesStarButton.onClick = function (aEvent){
+          var tfID = PlacesUtils.unfiledBookmarksFolderId;
+          var showUI = true;
+          try{
+            tfID = Services.prefs.getIntPref("extensions.cmimprove.bookmarks.parentFolder");
+            if(tfID == -1){
+              tfID = Services.prefs.getIntPref("extensions.cmimprove.bookmarks.add.defaultFolder");
+            }
+            showUI = (this._itemIds.length > 0) || Application.prefs.getValue("extensions.cmimprove.bookmarks.add.showEditUI",false);
+            if(!showUI)
+              tfID = PlacesUtils.unfiledBookmarksFolderId;
+            var folderTitle = PlacesUtils.bookmarks.getItemTitle(tfID)
+          }catch(e){
             tfID = PlacesUtils.unfiledBookmarksFolderId;
-          var folderTitle = PlacesUtils.bookmarks.getItemTitle(tfID)
-        } catch(e) {
-          tfID = PlacesUtils.unfiledBookmarksFolderId;
-          showUI = true;
+            showUI = true;;
+          }
+          if (aEvent.button == 0 && !this._pendingStmt) {
+            PlacesCommandHook.bookmarkCurrentPage(showUI,tfID);
+          }
+          aEvent.stopPropagation();
         }
-        if (aEvent.button == 0 && !this._pendingStmt) {
-          PlacesCommandHook.bookmarkCurrentPage(showUI, tfID);
+        PlacesStarButton.__defineGetter__("_unstarredTooltip", function(){
+          delete this._unstarredTooltip;
+          return this._unstarredTooltip =
+            getString("starButtonOff.tooltip");
+        });
+      } else {
+        BookmarkingUI.onCommand = function (aEvent){
+          var tfID = PlacesUtils.unfiledBookmarksFolderId;
+          var showUI = true;
+          try{
+            tfID = Services.prefs.getIntPref("extensions.cmimprove.bookmarks.parentFolder");
+            if(tfID == -1){
+              tfID = Services.prefs.getIntPref("extensions.cmimprove.bookmarks.add.defaultFolder");
+            }
+            showUI = (this._itemIds.length > 0) || Application.prefs.getValue("extensions.cmimprove.bookmarks.add.showEditUI",false);
+            if(!showUI)
+              tfID = PlacesUtils.unfiledBookmarksFolderId;
+            var folderTitle = PlacesUtils.bookmarks.getItemTitle(tfID)
+          }catch(e){
+            tfID = PlacesUtils.unfiledBookmarksFolderId;
+            showUI = true;;
+          }
+          if (aEvent.button == 0 && !this._pendingStmt) {
+            PlacesCommandHook.bookmarkCurrentPage(showUI,tfID);
+          }
+          aEvent.stopPropagation();
         }
-        aEvent.stopPropagation();
+        BookmarkingUI.__defineGetter__("_unstarredTooltip", function(){
+          delete this._unstarredTooltip;
+          return this._unstarredTooltip =
+            getString("starButtonOff.tooltip");
+        });
       }
-      PlacesStarButton.__defineGetter__("_unstarredTooltip", function() {
-        delete this._unstarredTooltip;
-        return this._unstarredTooltip = getString("starButtonOff.tooltip");
-      });
+
 
       StarUI.panel.addEventListener("popupshown", function () {
         StarUI._element("editBookmarkPanelTitle").value = getString("editBookmarkPanel.addBookmarkTitle");

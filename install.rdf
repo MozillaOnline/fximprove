@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>fx-improvement@mozillaonline.com</em:id>
-    <em:version>0.2.0.3</em:version>
+    <em:version>0.2.3.0</em:version>
     <em:type>2</em:type>
     <em:name>Improvements for Firefox</em:name>
     <em:description>Improve UX in Firefox.</em:description>

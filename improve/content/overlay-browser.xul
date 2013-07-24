@@ -101,8 +101,8 @@
   <vbox id="browser-panel" >
     <html:canvas id="ce-animation-canvas" class="animation-content" />
   </vbox>
-  <toolbar id="addon-bar" defaultset="addonbar-closebutton,spring,status-bar,mn-mailnotifier-status-bar,tcfontsetter,quickluanch-addonbar-item,ce_sanitizeHistory,ce_privateBrowser,ntabimprove,personas-toolbar-button,tczoompanel"/>
-  <toolbar id="nav-bar" defaultset="unified-back-forward-button,urlbar-container,reload-button,stop-button,urlbar-search-splitter,search-container,home-button,bookmarks-menu-button-container,window-controls,ce-undo-close-toolbar-button,ce_easyscreenshot"/>
+  <!--toolbar id="addon-bar" defaultset="addonbar-closebutton,spring,status-bar,mn-mailnotifier-status-bar,tcfontsetter,quickluanch-addonbar-item,ce_sanitizeHistory,ce_privateBrowser,ntabimprove,personas-toolbar-button,tczoompanel"/-->
+  <!--toolbar id="nav-bar" defaultset="unified-back-forward-button,urlbar-container,reload-button,stop-button,urlbar-search-splitter,search-container,home-button,bookmarks-menu-button-container,window-controls,ce-undo-close-toolbar-button,ce_easyscreenshot"/-->
   <textbox id="urlbar"    keyLabelNonMac=" &lt;Ctrl+L&gt;" keyLabelMac=" &lt;&#x2318;L&gt;"/>
   <searchbar id="searchbar" keyLabelNonMac=" &lt;Ctrl+K&gt;" keyLabelMac=" &lt;&#x2318;K&gt;"/>
   <statusbar id="status-bar">
