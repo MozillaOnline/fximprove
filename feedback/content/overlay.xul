@@ -8,11 +8,6 @@
   <script src="chrome://cmfeedback/content/overlay.js"/>
   <script src="chrome://cmfeedback/content/monitor.js"/>
 
-  <toolbarpalette id="BrowserToolbarPalette">
-    <toolbarbutton id="moz_cn_feedback" class="toolbarbutton-1" tooltiptext="&title.label;" label="&title.label;" oncommand="ceFeedback.show_panel();" >
-    </toolbarbutton>
-  </toolbarpalette>
-
   <popupset id="mainPopupSet">
     <panel id="moz-cn-feedback-popup"  type="arrow" >
       <vbox id="moz-cn-feedback-popup-main">

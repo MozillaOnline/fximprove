@@ -9,47 +9,43 @@
     }
   };
 
-  function installButton() {
-    try {
-      var firefoxnav = document.getElementById("nav-bar");
-      var newSet = firefoxnav.currentSet + "";
-      if (newSet.indexOf("moz_cn_feedback") == -1) {
-        newSet = newSet + ",moz_cn_feedback";
-        firefoxnav.setAttribute("currentset", newSet);
-        firefoxnav.currentSet = newSet;
-        document.persist("nav-bar", "currentset");
-        try {
-          BrowserToolboxCustomizeDone(true);
-        } catch(ex) {}
-      }
-      setFeedbackPref(true);
-    } catch(e) {}
-  }
-
   function feedback_init() {
-    var navbar = document.getElementById("nav-bar");
-    if (navbar != null) {
-      if (!getFeedbackPref()) {
-        installButton();
-      }
-      ceFeedback.panel.addEventListener("popupshown", function(e) {
-        gBrowser.addProgressListener(FeedbackListener);
-      }, false);
-      ceFeedback.panel.addEventListener("popuphidden", function(e) {
-        gBrowser.removeProgressListener(FeedbackListener);
-        document.getElementById("moz-cn-feedback-url").reset();
-      }, false);
+    var id = "moz_cn_feedback";
+    var area = CustomizableUI.AREA_NAVBAR;
+
+    var widget = CustomizableUI.getWidget(id);
+    if (!widget || widget.provider != CustomizableUI.PROVIDER_API) {
+      var strings = Services.strings.createBundle("chrome://cmfeedback/locale/overlay.properties");
+
+      CustomizableUI.createWidget(
+        { id : id,
+          type : "button",
+          defaultArea : area,
+          label : strings.GetStringFromName("title.label"),
+          tooltiptext : strings.GetStringFromName("title.label"),
+          onCommand: function(aEvent) {
+            var target = aEvent.target;
+            var doc = target && target.ownerDocument || document;
+            var win = doc.defaultView || window;
+            if (!win) {
+              return;
+            }
+
+            target = CustomizableUI.getWidget(id).forWindow(win).anchor;
+            target = document.getAnonymousElementByAttribute(target, "class", "toolbarbutton-icon") || target;
+            CustomizableUI.hidePanelForNode(target);
+            win.ceFeedback.show_panel(target);
+          }
+        });
     }
-  }
 
-  function getFeedbackPref() {
-    return Application.prefs.getValue("extensions.feedback@mozillaonline.com.installed", false);
-  }
-
-  function setFeedbackPref(val) {
-    try {
-      Application.prefs.setValue("extensions.feedback@mozillaonline.com.installed", val);
-    } catch(e) {}
+    ceFeedback.panel.addEventListener("popupshown", function(e) {
+      gBrowser.addProgressListener(FeedbackListener);
+    }, false);
+    ceFeedback.panel.addEventListener("popuphidden", function(e) {
+      gBrowser.removeProgressListener(FeedbackListener);
+      document.getElementById("moz-cn-feedback-url").reset();
+    }, false);
   }
 
   window.addEventListener("load", function() {setTimeout(feedback_init, 500);}, false);

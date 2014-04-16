@@ -15,12 +15,6 @@ var ceFeedback = {
     return this.panel = this.el("moz-cn-feedback-popup");
   },
 
-  get toolbarbutton() {
-    delete this.toolbarbutton;
-    if (this.el("moz_cn_feedback"))
-      return this.toolbarbutton = this.el("moz_cn_feedback");
-  },
-
   show_url: function() {
     if (ceFeedback.el("moz-cn-feedback-url").disabled == false) {
       this.el("moz-cn-feedback-require").style.display = "none";
@@ -28,11 +22,11 @@ var ceFeedback = {
     }
   },
 
-  show_panel: function() {
+  show_panel: function(aAnchor) {
     if (this.panel.state === "open" || this.panel.state === "showing") {
       this.panel.hidePopup();
     }
-    this.panel.openPopup(this.toolbarbutton, "after_end", -15, 0, false, false);
+    this.panel.openPopup(aAnchor, "bottomcenter topright");
   },
 
   show_success: function() {

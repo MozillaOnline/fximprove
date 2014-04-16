@@ -1,10 +1,4 @@
-<!ENTITY cp.menu.bookmarksShowAll "顯示所有書籤">
-<!ENTITY cp.showAllBookmarks2.label "顯示所有書籤">
-
 <!ENTITY cp.clearRecentHistory.none.label "不自動清除歷史紀錄">
 <!ENTITY cp.clearRecentHistory.7days.label "清除7天前歷史紀錄">
 
 <!ENTITY cp.clearRecentHistory.clearOnClose.label "關閉時清除歷史紀錄">
-
-<!ENTITY cp.newPrivateWindow.label                 "新增隱私視窗">
-<!ENTITY cp.newPrivateWindow.accesskey             "P">

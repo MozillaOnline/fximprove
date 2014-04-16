@@ -1,4 +1,3 @@
-<!ENTITY title.label "Feedback">
 <!ENTITY compat.title "Got problem when visiting websites:">
 <!ENTITY compat.label "Site URL: ">
 <!ENTITY compat.fillurl "Fill in with current URL">

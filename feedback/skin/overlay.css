@@ -1,20 +1,30 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 #moz_cn_feedback {
-  list-style-image: url("chrome://cmfeedback/skin/feed_icon.png") !important;
+  list-style-image: url("chrome://cmfeedback-os/skin/feedback.png") !important;
+}
+#moz_cn_feedback[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #moz_cn_feedback {
+  list-style-image: url("chrome://cmfeedback-os/skin/feedback-32.png") !important;
+}
+#moz_cn_feedback[cui-areatype="toolbar"]:not([overflowedItem=true]):-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://cmfeedback-os/skin/feedback-inverted.png") !important;
+}
+/* should be all osx, but limit to 10.7+ for simplicity */
+@media (-moz-mac-lion-theme) {
+  #moz_cn_feedback:hover:active:not([disabled="true"]):not([cui-areatype="menu-panel"]) {
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-pressed.png") !important;
+  }
+  #moz_cn_feedback[cui-areatype="toolbar"]:hover:active:not([disabled="true"]):not([overflowedItem=true]):-moz-lwtheme-brighttext {
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-inverted-pressed.png") !important;
+  }
 }
 
-#moz_cn_feedback:-moz-lwtheme-brighttext {
-  list-style-image: url("chrome://cmfeedback/skin/feed_icon-inverted.png") !important;
-}
-
-#TabsToolbar:last-child :-moz-any(#moz_cn_feedback) {
-  list-style-image: url("chrome://cmfeedback/skin/feed_icon-inverted.png") !important;
-}
 
 #moz-cn-feedback-popup {
-  margin-left:-10px; text-align:center; -moz-appearance: none;
+  /*margin-left:-10px;*/ text-align:center; -moz-appearance: none;
 }
 
 #moz-cn-feedback-popup-main {
