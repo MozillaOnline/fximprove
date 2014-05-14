@@ -1,3 +1,9 @@
+pref("startup.homepage_override_url", "https://mozilla.com.tw/firefox/%VERSION%/whatsnew/?oldversion=%OLD_VERSION%");
+pref("startup.homepage_welcome_url", "https://mozilla.com.tw/firefox/%VERSION%/firstrun/");
+
+pref("browser.uitour.url", "https://mozilla.com.tw/firefox/%VERSION%/tour/");
+pref("browser.uitour.whitelist.add.mocotw", "mozilla.com.tw");
+
 pref("browser.tabs.autoHide", false);
 
 pref("extensions.twimprove@mozillaonline.com.show_bookmark_toolbar", true);
