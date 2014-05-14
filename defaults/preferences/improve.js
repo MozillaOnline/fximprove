@@ -23,3 +23,6 @@ pref("extensions.cmimprove.bookmarks.add.showEditUI", true);
 
 // features enable
 pref("extensions.cmimprove.features.undocloseanimation.enable", true);
+
+// personas features
+pref("extensions.cmimprove.personas_plus.features.switched", 0);

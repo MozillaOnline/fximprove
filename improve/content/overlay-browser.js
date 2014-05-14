@@ -17,3 +17,20 @@
   } catch (e) {}
 })();
 
+(function() {
+  let featureUrlKey = "extensions.personas.featured-feed.url";
+  let featureUrlMocoTW =
+    "https://%ADDONS_HOST%/collections/Mozilla_Taiwan/mo/format:json?src=%SRC%";
+
+  let switchedKey = "extensions.cmimprove.personas_plus.features.switched";
+  let switched = 0;
+  let switchedExpected = 1;
+  try {
+    switched = Services.prefs.getIntPref(switchedKey);
+  } catch(e) {};
+
+  if (switched < switchedExpected) {
+    Services.prefs.setCharPref(featureUrlKey, featureUrlMocoTW);
+    Services.prefs.setIntPref(switchedKey, switchedExpected);
+  }
+})();
