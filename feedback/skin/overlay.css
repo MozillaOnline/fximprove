@@ -15,13 +15,37 @@ toolbarpaletteitem[place="palette"] > #moz_cn_feedback {
 /* should be all osx, but limit to 10.7+ for simplicity */
 @media (-moz-mac-lion-theme) {
   #moz_cn_feedback:hover:active:not([disabled="true"]):not([cui-areatype="menu-panel"]) {
-    list-style-image: url("chrome://cmfeedback-os/skin/feedback-pressed.png") !important;
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-active.png") !important;
   }
   #moz_cn_feedback[cui-areatype="toolbar"]:hover:active:not([disabled="true"]):not([overflowedItem=true]):-moz-lwtheme-brighttext {
-    list-style-image: url("chrome://cmfeedback-os/skin/feedback-inverted-pressed.png") !important;
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-inverted-active.png") !important;
   }
 }
 
+@media (-moz-mac-lion-theme) and (min-resolution: 2dppx) {
+  #moz_cn_feedback {
+  list-style-image: url("chrome://cmfeedback-os/skin/feedback@2x.png") !important;
+  }
+  #moz_cn_feedback[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #moz_cn_feedback {
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-32@2x.png") !important;
+  }
+  #moz_cn_feedback[cui-areatype="toolbar"]:not([overflowedItem=true]):-moz-lwtheme-brighttext {
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-inverted@2x.png") !important;
+  }
+
+  #moz_cn_feedback:hover:active:not([disabled="true"]):not([cui-areatype="menu-panel"]) {
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-active@2x.png") !important;
+  }
+  #moz_cn_feedback[cui-areatype="toolbar"]:hover:active:not([disabled="true"]):not([overflowedItem=true]):-moz-lwtheme-brighttext {
+    list-style-image: url("chrome://cmfeedback-os/skin/feedback-inverted-active@2x.png") !important;
+  }
+
+  #moz_cn_feedback > .toolbarbutton-icon,
+  #moz_cn_feedback > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+    width: 16px;
+  }
+}
 
 #moz-cn-feedback-popup {
   /*margin-left:-10px;*/ text-align:center; -moz-appearance: none;
