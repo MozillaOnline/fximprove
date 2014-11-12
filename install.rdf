@@ -5,8 +5,9 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>fx-improvement@mozillaonline.com</em:id>
-    <em:version>0.3.1</em:version>
+    <em:version>0.3.2</em:version>
     <em:type>2</em:type>
+    <em:strictCompatibility>true</em:strictCompatibility>
     <em:name>Improvements for Firefox</em:name>
     <em:description>Improve UX in Firefox.</em:description>
     <em:creator>Mozilla Online</em:creator>
@@ -17,7 +18,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>29.0</em:minVersion>
-        <em:maxVersion>30.*</em:maxVersion>
+        <em:maxVersion>34.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
